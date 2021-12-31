@@ -1,0 +1,8 @@
+DROP TABLE chats;
+CREATE TABLE chats(
+    c_id NUMBER(20) GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    c_from VARCHAR2(30) NOT NULL,
+    c_to VARCHAR2(30),
+    c_content VARCHAR2(4000),
+    c_date DATE DEFAULT sysdate
+);
